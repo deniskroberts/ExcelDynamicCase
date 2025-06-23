@@ -94,13 +94,22 @@ namespace Assets.Creator_Kit___RPG.Persistence
 
         public static string[] UnlockRandomFunctions(QuestionRewardClassification questionRewardClassification)
         {
-            string[] candidateUnlocks = QuestionRewardsDatabase.FunctionRewardsByClassification[questionRewardClassification];
+            string[] allCandidateUnlocks = QuestionRewardsDatabase.FunctionRewardsByClassification[questionRewardClassification];
+
+            string[] lockedCandidateUnlocks = GetFunctionsToUnlock(questionRewardClassification);
 
             List<string> selectedFunctions = new();
 
             for (int i = 0; i < 3; i++)
             {
-                selectedFunctions.Add(candidateUnlocks[UnityEngine.Random.Range((int)0, candidateUnlocks.Length)]);
+                if (UnityEngine.Random.Range((int)0, 2) == 0 || (lockedCandidateUnlocks.Length == 1 && lockedCandidateUnlocks.First() == NOFUNCTIONAVAILABLE))
+                {
+                    selectedFunctions.Add(allCandidateUnlocks[UnityEngine.Random.Range((int)0, allCandidateUnlocks.Length)]);
+                }
+                else
+                {
+                    selectedFunctions.Add(lockedCandidateUnlocks[UnityEngine.Random.Range((int)0, lockedCandidateUnlocks.Length)]);
+                }
             }
 
             selectedFunctions = selectedFunctions.Distinct().ToList();

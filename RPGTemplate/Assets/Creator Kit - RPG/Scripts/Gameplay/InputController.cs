@@ -50,7 +50,7 @@ namespace RPGM.UI
 
             if (battleResult.IsSuccess)
             {
-                SaveManager.UnlockRandomFunctions(npcController.rewardClassification);
+                unlockedFunctions = SaveManager.UnlockRandomFunctions(npcController.rewardClassification);
             }
 
             Events.ShowConversation ev = Schedule.Add<Events.ShowConversation>();
