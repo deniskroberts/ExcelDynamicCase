@@ -36,7 +36,7 @@ If you want to build or modify the source code:
 - Unity with editor 2021.3.11f1
 - The PipelineToUnity project debug dll and dependency Newtonsoft dll need to copied over the corresponding asset plugin
 
-## Music Credits 𝄠𝄠
+## 𝄠 Music Credits
 
 Zame (Twinleaf Town: Remastered), (Battle! Mercury (Barry's Ancestor))
 https://www.youtube.com/@The_Zame
