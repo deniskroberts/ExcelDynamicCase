@@ -31,10 +31,10 @@ If you want to build or modify the source code:
 
 ### Requirements
 
-- Visual Studio 2022 or later (with .NET 4.8 targeting pack, .net2.0 targeting pack and appropriate VSTO bulid tools and configuration)
+- Visual Studio 2022 or later (with .NET 4.8 targeting pack, .net2.0 targeting pack and appropriate VSTO build tools, Unity build tools and configuration)
 - Git (optional but recommended)
-- Unity with editor 2021.3.11f1
-- The PipelineToUnity project debug dll and dependency Newtonsoft dll need to copied over the corresponding asset plugin
+- Unity with editor 2021.3.11f1 (Open RPGTemplate folder)
+- The PipelineToUnity project debug dll and dependency Newtonsoft dll need to copied over the corresponding asset plugin when updated.
 
 ## 𝄠 Music Credits
 
