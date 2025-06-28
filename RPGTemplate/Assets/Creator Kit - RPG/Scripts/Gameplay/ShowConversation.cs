@@ -58,6 +58,10 @@ namespace RPGM.Events
             if (ci.text == "BATTLE")
             {
                 GameObject gameObject = GameObject.Find("PipeBootstrap");
+                GameObject musicGameObject = GameObject.Find("Controllers");
+                MusicController musicController = musicGameObject.GetComponent<MusicController>();
+                musicController.CrossFadeIntoBattle(npc.name == "MichaelJarman");
+
                 PipeBootstrap pipeBootstrap = gameObject.GetComponent<PipeBootstrap>();
 
                 BattleParameters battleParameters = BattleManager.GetBattleParameters(npc.gameObject.name, npc.rewardClassification, out float minutes);

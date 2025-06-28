@@ -39,12 +39,12 @@ namespace RPGM.UI
 
         void Update()
         {
-            if (syllables.Count > 0 && syllables.Peek().time < Time.time)
-            {
-                var s = syllables.Dequeue();
-                audioSource.pitch = Random.Range(0.8f, 1.2f);
-                Play(vocals[s.index]);
-            }
+            //if (syllables.Count > 0 && syllables.Peek().time < Time.time)
+            //{
+            //    var s = syllables.Dequeue();
+            //    audioSource.pitch = Random.Range(0.8f, 1.2f);
+            //    Play(vocals[s.index]);
+            //}
         }
 
         void PlaySpeech(int seed, int syllableCount, float pitch)
@@ -96,10 +96,10 @@ namespace RPGM.UI
 
         void Play(AudioClip clip)
         {
-            if (clip != null)
-            {
-                audioSource.PlayOneShot(clip);
-            }
+            //if (clip != null)
+            //{
+            //    audioSource.PlayOneShot(clip);
+            //}
         }
 
         public static void OnHideDialog()
@@ -110,7 +110,7 @@ namespace RPGM.UI
 
         public static void PlayClip(AudioClip audioClip)
         {
-            if (instance != null) instance.Play(audioClip);
+            //if (instance != null) instance.Play(audioClip);
         }
     }
 }

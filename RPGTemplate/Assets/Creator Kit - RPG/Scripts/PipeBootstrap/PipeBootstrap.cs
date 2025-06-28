@@ -49,6 +49,10 @@ public class PipeBootstrap : MonoBehaviour
             {
                 BattleResult battleResult = await PipeHelper.ReadAsync<BattleResult>(_pipe, _cts.Token);
 
+                GameObject musicGameObject = GameObject.Find("Controllers");
+                MusicController musicController = musicGameObject.GetComponent<MusicController>();
+                musicController.CrossFadeOutOfBattle();
+
                 if (battleResult.IsSuccess)
                 {
                     SaveManager.SaveCompletedBattle(BattleManager.LastQuestionId, battleResult.IsPure);
