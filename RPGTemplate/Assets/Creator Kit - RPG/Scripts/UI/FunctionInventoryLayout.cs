@@ -21,6 +21,7 @@ namespace Assets.Creator_Kit___RPG.Scripts.UI
         public SpriteRenderer spriteRenderer;
         public TextMeshPro textMeshPro;
         public TMP_Text itemTextMeshPro;
+        public TMP_Text rankTextMeshPro;
         public ScrollRect unlockedFunctions;
         public ScrollRect lockedFunctions;
         public ScrollRect completedLevels;
@@ -48,21 +49,69 @@ namespace Assets.Creator_Kit___RPG.Scripts.UI
             int[] expert = BattleManager.GetQuestionsByRewardClassification(QuestionRewardClassification.ExpertAggregates);
             int[] divine = BattleManager.GetQuestionsByRewardClassification(QuestionRewardClassification.DivineAggregates);
 
+
+
             List<int> pureCompletedQuestions = saveData.PureCompletedQuestions;
             List<int> completedQuestions = saveData.CompletedQuestions;
 
+            int basicCount = completedQuestions.Where(x => basic.Contains(x)).Count();
+            int advancedCount = completedQuestions.Where(x => advanced.Contains(x)).Count();
+            int expertCount = completedQuestions.Where(x => expert.Contains(x)).Count();
+            int divineCount = completedQuestions.Where(x => divine.Contains(x)).Count();
+
             string[] completedLevelFill = new string[4]
             {
-                $"Easy: {completedQuestions.Where(x => basic.Contains(x)).Count()}/{basic.Length}, {pureCompletedQuestions.Where(x => basic.Contains(x)).Count()}/{basic.Length}",
-                $"Advanced: {completedQuestions.Where(x => advanced.Contains(x)).Count()}/{advanced.Length}, {pureCompletedQuestions.Where(x => advanced.Contains(x)).Count()}/{advanced.Length}",
-                $"Expert: {completedQuestions.Where(x => expert.Contains(x)).Count()}/{expert.Length}, {pureCompletedQuestions.Where(x => expert.Contains(x)).Count()}/{expert.Length}",
-                $"Divine: {completedQuestions.Where(x => divine.Contains(x)).Count()}/{divine.Length}, {pureCompletedQuestions.Where(x => divine.Contains(x)).Count()}/{divine.Length}",
+                $"Easy: {basicCount}/{basic.Length}, {pureCompletedQuestions.Where(x => basic.Contains(x)).Count()}/{basic.Length}",
+                $"Advanced: {advancedCount}/{advanced.Length}, {pureCompletedQuestions.Where(x => advanced.Contains(x)).Count()}/{advanced.Length}",
+                $"Expert: {expertCount}/{expert.Length}, {pureCompletedQuestions.Where(x => expert.Contains(x)).Count()}/{expert.Length}",
+                $"Divine: {divineCount}/{divine.Length}, {pureCompletedQuestions.Where(x => divine.Contains(x)).Count()}/{divine.Length}",
             };
+
+            SetRank(basicCount, advancedCount, expertCount, divineCount);
 
 
             Fill(unlockedFunctions.content, savedUnlockedFunctions, 0, savedUnlockedFunctions.Count);
             Fill(lockedFunctions.content, savedLockedFunctions, 0, savedLockedFunctions.Length);
             Fill(completedLevels.content, completedLevelFill, 0, 4);
+        }
+
+        void SetRank(int basicCount, int advancedCount, int expertCount, int divineCount)
+        {
+            double points = basicCount * 10 + advancedCount * 30 + expertCount * 150 + divineCount * 500;
+            string rank;
+
+            if (points < 20) { rank = "Sheets User :("; }
+            else if (points < 40) { rank = "Baby"; }
+            else if (points < 60) { rank = "Toddler"; }
+            else if (points < 80) { rank = "Child"; }
+            else if (points < 100) { rank = "Beginner"; }
+            else if (points < 120) { rank = "Average Joe"; }
+            else if (points < 160) { rank = "Basic"; }
+            else if (points < 240) { rank = "Probation"; }
+            else if (points < 320) { rank = "Novice"; }
+            else if (points < 400) { rank = "Unpaid Temp"; }
+            else if (points < 480) { rank = "Apprentice"; }
+            else if (points < 560) { rank = "Prodigy"; }
+            else if (points < 640) { rank = "Coffee Fetcher"; }
+            else if (points < 800) { rank = "Junior Analyst"; }
+            else if (points < 960) { rank = "Analyst"; }
+            else if (points < 1230) { rank = "Workhorse"; }
+            else if (points < 1460) { rank = "Snr. Analyst"; }
+            else if (points < 1740) { rank = "Team Lead"; }
+            else if (points < 1960) { rank = "Consultant"; }
+            else if (points < 1250) { rank = "Coffee Drinker"; }
+            else if (points < 2460) { rank = "Snr. Consultant"; }
+            else if (points < 2750) { rank = "I. Contributor"; }
+            else if (points < 2960) { rank = "Manager"; }
+            else if (points < 3250) { rank = "Expert"; }
+            else if (points < 3460) { rank = "Head of Dept."; }
+            else if (points < 4450) { rank = "Master"; }
+            else if (points < 5450) { rank = "Grand Master"; }
+            else if (points < 6440) { rank = "God"; }
+            else if (points < 7430) { rank = "ANgaiAllator"; }
+            else { rank = "Completionist :)"; }
+
+            rankTextMeshPro.text = $"{rank} ({points})";
         }
 
         void Fill(RectTransform parent, IReadOnlyList<string> src, int start, int end)
