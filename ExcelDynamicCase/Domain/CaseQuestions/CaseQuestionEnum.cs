@@ -61,5 +61,17 @@
         MEWC2023LanaBananaL5 = 40020,
         MEWC2023LanaBananaB1 = 40021,
         MEWC2023LanaBananaB2 = 40022,
+        MEWC2023FlowerPowerDirectorCutB3 = 40023,
+        MEWC2024LanaGoesIceSkatingB5 = 40024,
+        CobyDombrowskyCreataceousParkL5 = 40025,
+        FMWCUK2025AllsWellThatEndsExcelB3 = 40026,
+        LaytonASweetTreat = 50104,
+        LaytonTheFrogsPath = 51088,
+        LaytonTheScholarsLife = 51142,
+        Layton500Pearls = 51145,
+        LaytonTheCardTournament = 51152,
+        LaytonFollowTheCode = 52111,
+        LaytonACrypticCombo = 52120,
+        LaytonButtonToButton = 53168,
     }
 }

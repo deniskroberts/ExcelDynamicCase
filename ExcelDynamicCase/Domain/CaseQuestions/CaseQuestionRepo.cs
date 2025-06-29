@@ -1517,7 +1517,7 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                             }
                         },
                         {
-                            "Lana Banana", 
+                            "Lana Banana",
                             _lanaBanana
                         },
                     },
@@ -1758,6 +1758,335 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                     Minutes = 3f,
                 }
             },
+            {
+                CaseQuestionEnum.LaytonASweetTreat,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.LaytonASweetTreat,
+                    QuestionText = "You go to the shop to buy some almond chocolate to share with your friends. However, upon unwrapping the chocolate, you find that only not all of the chocolate squares actually have an almond in them.\r\n\r\nThe letter C represents a non-almond chocolate square and A represents an almond chocolate square.\r\n\r\nCut up the chocolate along the cell borders in such a way that each resulting block is the exact same exact shape (in terms of cells) up to rotation, and each contains 1 almond.\r\n\r\nThe position of an almond within the shape should be evenly divided between each of the squares in that shape - i.e. if your blocks have n squares, 1/n of them should have the almond in position A, 1/n in position B etc.\r\n\r\nAnswer with the total number of cell borders that you would have to cut in total to divide the chocolate.",
+                    QuestionLink = "https://layton.fandom.com/wiki/Puzzle:A_Sweet_Treat",
+                    Data = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "Chocolate",
+                            new object[,]
+                            {
+                                {"C","C","C","A","A","C","A","C","C","C","C","A","A","C","A","C"},
+                                {"C","C","C","C","C","C","C","C","C","C","C","C","C","C","C","C"},
+                                {"A","C","C","A","C","C","C","A","A","C","C","A","C","C","C","A"},
+                                {"C","A","C","C","C","C","A","C","C","A","C","C","C","C","A","C"},
+                                {"A","C","A","C","C","C","A","C","A","C","A","C","C","C","A","C"},
+                                {"C","C","C","C","A","C","C","A","C","C","C","C","A","C","C","A"},
+                                {"C","C","C","A","C","C","C","C","C","C","C","A","C","C","C","C"},
+                                {"C","C","A","C","A","C","C","C","C","C","A","C","A","C","C","C"},
+                                {"C","C","C","A","C","A","C","C","C","C","C","A","C","A","C","C"},
+                                {"C","C","C","C","A","C","C","C","C","C","C","C","A","C","C","C"},
+                                {"A","C","C","A","C","C","C","C","A","C","C","A","C","C","C","C"},
+                                {"C","A","C","C","C","A","C","A","C","A","C","C","C","A","C","A"},
+                                {"C","A","C","C","C","C","A","C","A","C","A","C","C","C","C","A"},
+                                {"A","C","C","C","A","C","C","A","C","C","C","C","C","C","C","C"},
+                                {"C","C","C","C","C","C","C","C","C","C","C","A","A","C","C","A"},
+                                {"C","A","C","A","A","C","C","C","C","C","A","C","C","A","C","C"},
+
+                            }
+                        }
+                    },
+                    Answer = "288",
+                    ExampleAnswer = 200,
+                    Minutes = 30f,
+                }
+            },
+            {
+                CaseQuestionEnum.Layton500Pearls,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.Layton500Pearls,
+                    QuestionText = "A wizard sets a traveller a strange task.\r\n\r\n\"There are 500 pearls in that cave. I want you to go and bring a certain number of pearls to me. This number allows you to divide the pearls into groups of 2, 3, 4, 5, 6 or 7 and always have one pearl left over. Bring me this number of pearls and you can keep them all for yourself!\"\r\n\r\nThe traveller tries his best, but the number of pearls he bring back doesn't leave one pearl over when divided into groups of 4. How many pearls did he bring to the wizard?",
+                    QuestionLink = "https://layton.fandom.com/wiki/Puzzle:500_Pearls",
+                    Answer = "211",
+                    ExampleAnswer = 200,
+                    Minutes = 3f,
+                }
+            },
+            {
+                CaseQuestionEnum.LaytonTheCardTournament,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.LaytonTheCardTournament,
+                    QuestionText = "Some people meet for a round-robin card tournament, where every player plays one hand against every other player. Monty has to leave after only a few hands, missing the remainder of the tournament. A total of 59 hands are played at the tournament. How many hands did Monty play before leaving?\r\n\r\nThe card game in question is a two-player game, and no person played with the same opponent more than once. No one missed any hands besides Monty.",
+                    QuestionLink = "https://layton.fandom.com/wiki/Puzzle:The_Card_Tournament",
+                    Answer = "4",
+                    ExampleAnswer = 7,
+                    Minutes = 4f,
+                }
+            },
+            {
+                CaseQuestionEnum.LaytonTheScholarsLife,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.LaytonTheScholarsLife,
+                    QuestionText = "The following words are written on a famous mathematician's grave.\r\n\r\n\"Following the 1/6th of my life I spent as a child, I spent 1/12th of my life as a young man. Then, 1/7th of my life later, I got married. Five years after I wed, I was blessed with a child, but sadly, he only lived half the time I was alive before passing away. Today, four years after his death, I too will depart from this world.\"\r\n\r\nCan you work out how many years the mathematician lived",
+                    QuestionLink = "https://layton.fandom.com/wiki/Puzzle:The_Scholar%27s_Life",
+                    Answer = "84",
+                    ExampleAnswer = 43,
+                    Minutes = 3f,
+                }
+            },
+            {
+                CaseQuestionEnum.LaytonTheFrogsPath,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.LaytonTheFrogsPath,
+                    QuestionText = "A frog sits perched on the space labeled S in the grid below. This little guy has an unusual jump. His first jump travels one space, his second jump travels two spaces, and his third jump travels three spaces. After his third jump he repeats this pattern. The frog can't change his direction midjump, but he can turn around between jumps.\r\n\r\nThe frog's goal is to move through the path below and land exactly on the space marked G. What is the fewest number of jumps he needs to make to do this?\r\n\r\nThe frog can only jump on valid items on the path marked with some letter.\r\nNote that in some situations the frog might become stuck and unable to move.",
+                    QuestionLink = "https://layton.fandom.com/wiki/Puzzle:The_Frog%27s_Path",
+                    Data = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "Path",
+                            new object[,]
+                            {
+                                {null,null,null,null,null,null,null,null,null,null,null,null,null,null},
+                                {null,null,null,null,null,null,null,null,null,null,null,null,null,null},
+                                {null,null,null,null,null,"X","S",null,null,null,null,null,null,null},
+                                {null,null,null,null,null,"X",null,null,null,null,null,null,null,null},
+                                {null,null,null,null,null,"X",null,null,null,null,null,null,null,null},
+                                {null,null,null,null,null,"X",null,null,null,null,null,null,null,null},
+                                {null,null,null,null,null,"X",null,null,null,null,null,null,null,null},
+                                {null,null,null,null,null,"X","X","X","X","X","X","X","X",null},
+                                {null,null,null,null,null,null,null,null,null,null,null,null,"X",null},
+                                {null,null,null,null,null,null,null,null,null,null,null,null,"X",null},
+                                {null,null,null,null,null,null,null,null,null,null,null,null,"X",null},
+                                {null,null,null,null,null,null,null,null,null,"X","X","X","X",null},
+                                {null,null,null,null,"X","X","X","X","X","X",null,null,"X",null},
+                                {null,null,null,null,"X",null,null,null,null,null,null,null,null,null},
+                                {null,null,null,null,"X",null,null,null,null,null,null,null,null,null},
+                                {null,null,null,null,"X",null,null,null,null,null,null,null,null,null},
+                                {null,null,null,null,"X",null,null,null,null,null,null,null,null,null},
+                                {null,null,null,null,"X",null,null,null,null,null,null,null,null,null},
+                                {null,null,null,null,"X",null,null,null,null,null,null,null,null,null},
+                                {"X","X","X","X","X",null,null,"G","X","X","X","X","X","X"},
+                                {"X",null,null,null,null,null,null,null,null,null,null,null,null,"X"},
+                                {"X",null,null,null,null,null,null,null,null,null,null,null,null,"X"},
+                                {"X","X",null,null,null,null,null,null,null,null,null,"X","X","X"},
+                                {null,"X",null,null,null,null,null,null,"X","X","X","X",null,null},
+                                {null,"X",null,null,null,null,null,null,"X",null,null,null,null,null},
+                                {null,"X",null,null,null,null,null,null,"X",null,null,null,null,null},
+                                {null,"X",null,null,null,null,null,null,"X",null,null,null,null,null},
+                                {null,"X","X","X","X","X","X","X","X",null,null,null,null,null},
+                            }
+                        }
+                    },
+                    Answer = "42",
+                    ExampleAnswer = 51,
+                    Minutes = 20f,
+                }
+            },
+            {
+                CaseQuestionEnum.LaytonACrypticCombo,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.LaytonACrypticCombo,
+                    QuestionText = "To open the door, you'll need to press the numerical buttons according to these cryptic instructions:\r\n\r\n\"Open with two, but leave four.\"\r\n\r\nPressing just the \"2\" button and leaving the \"4\" button untouched doesn't work. So how, exactly, are you supposed to open this door?\r\n\r\nWrite the sum of the numerical buttons you should press.",
+                    QuestionLink = "https://layton.fandom.com/wiki/Puzzle:A_Cryptic_Combo",
+                    Data = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "CodeEntry",
+                            new object[,]
+                            {
+                                {1d,2d,3d},
+                                {4d,5d,6d},
+                                {7d,8d,9d},
+                                {10d,11d,12d},
+                                {13d,14d,15d},
+                            }
+                        },
+                    },
+                    Answer = "88",
+                    ExampleAnswer = 15,
+                    Minutes = 3f,
+                }
+            },
+            {
+                CaseQuestionEnum.LaytonFollowTheCode,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.LaytonFollowTheCode,
+                    QuestionText = "This note contains instructions for disarming the traps in the room that trigger if you don't follow the movement path!\r\n\r\n\"In the top corner, you can disarm the traps.  Trace a path from the centre square, going horizontally or vertically from square to square in the order 1, 2, 3, 1, 2, 3, 1,... until you reach the correct button. You cannot pass through the same square twice.\"\r\n\r\nAnswer with the number of squares walked on, including the starting centre cell and the ending top left cell.",
+                    QuestionLink = "https://layton.fandom.com/wiki/Puzzle:Follow_the_Code",
+                    Data = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "Floor Layout",
+                            new object[,]
+                            {
+                                {1d,2d,3d,1d,2d,3d,2d,},
+                                {3d,1d,3d,1d,2d,1d,3d,},
+                                {2d,1d,2d,1d,3d,2d,3d,},
+                                {2d,3d,1d,1d,2d,1d,1d,},
+                                {1d,2d,1d,2d,3d,3d,2d,},
+                                {2d,3d,3d,2d,2d,1d,2d,},
+                                {3d,2d,3d,1d,3d,3d,1d,},
+                            }
+                        }
+                    },
+                    Answer = "31",
+                    ExampleAnswer = 10,
+                    Minutes = 10f,
+                }
+            },
+            {
+                CaseQuestionEnum.LaytonButtonToButton,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.LaytonButtonToButton,
+                    QuestionText = "In order to open the lock you have to press all the buttons on the keypad in an order dictated by the symbols on the buttons, finishing with the star button in the centre of the lock. (N-E-W-S = North-East-South-West)\r\n\r\nWhich button is first in the sequence that opens the lock?\r\n\r\nAnswer in Excel grid notation if the lockpad was in A1:E5.",
+                    QuestionLink = "https://layton.fandom.com/wiki/Puzzle:Button_to_Button",
+                    Data = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "LockPad",
+                            new object[,]
+                            {
+                                {"3E","4S","2W","2W","2S",},
+                                {"3E","3E","3S","2W","2S",},
+                                {"1E","1S","Start","3W","2W",},
+                                {"2N","1W","3N","1N","2W",},
+                                {"4E","1W","1E","1E","4N",},
+                            }
+                        }
+                    },
+                    Answer = "C2",
+                    ExampleAnswer = "D1",
+                    Minutes = 7f,
+                }
+            },
+            {
+                CaseQuestionEnum.MEWC2023FlowerPowerDirectorCutB3,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.MEWC2023FlowerPowerDirectorCutB3,
+                    QuestionText = "Suppose you have a 2x5 grid of tulips, and you can repeatedly select a flower and apply a 'pivot' operation to it, which transforms the flower and its vertical/horizneighbours from tulips to sunflowers and sunflowers to tulips.\r\n\r\nIf you can use this action as many times as you want, how many different configurations of flowerbed (i.e. unique flowerbeds) can you produce?",
+                    QuestionLink = "https://fmworldcup.com/product/flower-power-mewc-2023/",
+                    Answer = "512",
+                    ExampleAnswer = 1024,
+                    Minutes = 12f,
+                }
+            },
+            {
+                CaseQuestionEnum.MEWC2024LanaGoesIceSkatingB5,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.MEWC2024LanaGoesIceSkatingB5,
+                    QuestionText = "Suppose Lana Banana sets of diagonally down-right from the top of a 12 (height) x25 (width) rectangle, and when she reaches the border, she bounces off such that either her vertical or horizontal momentum flips and she is still in the rectangle, or both flip if she hits a corner perfectly.\r\n\r\nHow many times will she crash into a border BEFORE bouncing into the top-left corner?  Hitting a corner perfectly counts as 2 crashes.",
+                    QuestionLink = "https://fmworldcup.com/product/lana-goes-ice-skating-mewc-2024/",
+                    Answer = "68",
+                    ExampleAnswer = 80,
+                    Minutes = 12f,
+                }
+            },
+            {
+                CaseQuestionEnum.CobyDombrowskyCreataceousParkL5,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.CobyDombrowskyCreataceousParkL5,
+                    QuestionText = "Power needs to be restored to the electric fences keeping the dinosaurs in their enclosures.\r\nThe cricuit breakers on the Fuse Box tab need to be turned on in sequential order.\r\nDetermine in which order switches A throught U need to be flipped to get the power back on.\r\nTo determine which switch leads to which circuit breaker, follow the wire up from the switch and always cross over to a new column if available.\r\n\r\nAnswer with the concatenation of the letter answers for all of the circuit breakers.",
+                    QuestionLink = "http://bit.ly/3EMivW6",
+                    Data  = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "Electrical System",
+                            new object[,]
+                            {
+                                {"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21",},
+                                {"⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡","⚡",},
+                                {"┃","┃","┃","┃","┃","┃","┣","┫","┣","┫","┃","┃","┃","┃","┃","┣","┫","┣","┫","┣","┫",},
+                                {"┃","┣","┫","┣","┫","┣","┫","┃","┣","┫","┃","┣","┫","┣","┫","┃","┣","┫","┃","┃","┃",},
+                                {"┣","┫","┃","┣","┫","┣","┫","┣","┫","┃","┣","┫","┣","┫","┃","┣","┫","┣","┫","┣","┫",},
+                                {"┃","┣","┫","┃","┣","┫","┃","┃","┣","┫","┃","┣","┫","┃","┣","┫","┣","┫","┣","┫","┃",},
+                                {"┣","┫","┣","┫","┃","┃","┃","┣","┫","┃","┣","┫","┃","┣","┫","┃","┣","┫","┃","┣","┫",},
+                                {"┃","┣","┫","┣","┫","┃","┃","┣","┫","┣","┫","┃","┃","┣","┫","┣","┫","┃","┣","┫","┃",},
+                                {"┣","┫","┣","┫","┃","┣","┫","┣","┫","┃","┣","┫","┣","┫","┃","┃","┣","┫","┃","┃","┃",},
+                                {"┃","┣","┫","┃","┣","┫","┃","┣","┫","┃","┃","┣","┫","┃","┣","┫","┃","┃","┃","┃","┃",},
+                                {"┃","┣","┫","┣","┫","┃","┣","┫","┣","┫","┣","┫","┃","┣","┫","┣","┫","┣","┫","┣","┫",},
+                                {"┣","┫","┣","┫","┃","┃","┣","┫","┣","┫","┃","┣","┫","┃","┣","┫","┣","┫","┃","┃","┃",},
+                                {"┃","┣","┫","┣","┫","┣","┫","┃","┃","┃","┣","┫","┃","┣","┫","┣","┫","┣","┫","┃","┃",},
+                                {"┣","┫","┃","┃","┣","┫","┣","┫","┣","┫","┣","┫","┣","┫","┣","┫","┃","┃","┣","┫","┃",},
+                                {"┃","┣","┫","┣","┫","┣","┫","┣","┫","┃","┃","┃","┃","┃","┃","┣","┫","┃","┃","┣","┫",},
+                                {"┣","┫","┃","┃","┣","┫","┣","┫","┃","┣","┫","┃","┣","┫","┣","┫","┃","┃","┃","┃","┃",},
+                                {"┃","┃","┃","┣","┫","┣","┫","┣","┫","┃","┃","┣","┫","┣","┫","┃","┃","┃","┃","┃","┃",},
+                                {"┣","┫","┃","┃","┣","┫","┣","┫","┃","┣","┫","┃","┃","┃","┣","┫","┃","┃","┣","┫","┃",},
+                                {"┣","┫","┣","┫","┣","┫","┣","┫","┣","┫","┣","┫","┃","┣","┫","┃","┣","┫","┃","┣","┫",},
+                                {"┃","┣","┫","┣","┫","┣","┫","┣","┫","┣","┫","┃","┣","┫","┃","┣","┫","┣","┫","┃","┃",},
+                                {"┣","┫","┣","┫","┣","┫","┃","┃","┣","┫","┣","┫","┣","┫","┣","┫","┃","┃","┣","┫","┃",},
+                                {"🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚","🎚",},
+                                {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U",},
+                            }
+                        }
+                    },
+                    Answer = "JFEBCLMDAHPKIOGUTQSRN",
+                    ExampleAnswer = "ABCDEVFPEJUPJEEDNE",
+                    Minutes = 9f,
+                }
+            },
+            {
+                CaseQuestionEnum.FMWCUK2025AllsWellThatEndsExcelB3,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.FMWCUK2025AllsWellThatEndsExcelB3,
+                    QuestionText = "If all the soldiers on the field in Birnam forest move up 3x their point value in rows (e.g. a footman is worth 3 points, so moves up 3x3 = 9 rows), they all end up on the battlefield in front of the castle. In their battle formation, they spell out a message. What is it?  (Include the space character in the answer.)",
+                    QuestionLink = "https://fmwc.uk/case-00-alls-well/",
+                    Data = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "Points Table",
+                            new object[,]
+                            {
+                                {"Icon","Description","Point value",},
+                                {"🚶","Footman",3d,},
+                                {"⚔","Infantry",4d,},
+                                {"🏹","Archers",5d,},
+                                {"🏇","Cavalry",6d,},
+                                {"💣","Cannon",7d,},
+                                {"⛨","Medic",8d,},
+                                {"👑","Commander",9d,},
+                            }
+                        },
+                        {
+                            "Birnam Forest",
+                            new object[,]
+                            {
+                                {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,},
+                                {null,"🌲",null,null,null,"🌲",null,null,null,"🌲","🌲","🌲",null,"🌲","🌲",null,"🌲","🌲",null,null,"🌲","🌲",null,"🌲","🌲","🌲",null,"🌲","🌲","🌲",null,"🌲",null,},
+                                {"🌲",null,"🌲","🌲","🌲","🚶",null,"🌲","🌲","🚶","🌲","🌲",null,"🌲",null,"🌲","🌲","🌲",null,null,"🌲",null,"🌲","🌲",null,"🌲",null,"🚶","🌲","🚶",null,"🌲",null,},
+                                {"🚶","🌲","🌲","🌲","🌲","🌲",null,null,null,null,"🌲","🚶",null,null,null,"🚶",null,"🚶",null,null,"🌲",null,"🌲","🌲",null,"🌲",null,null,"🌲","🌲",null,"🌲","🌲",},
+                                {"🌲",null,"🌲","🌲","🌲","🌲","🌲",null,null,null,"🌲","🌲",null,null,null,"🌲",null,null,"🌲","🌲",null,null,null,null,"🌲","🌲",null,null,null,"🌲","🌲","🌲","🌲",},
+                                {"⚔","🌲","🌲","⚔",null,"🌲",null,null,null,null,null,"⚔",null,"🌲","🌲","⚔","🌲","🌲","⚔",null,"🌲",null,null,"🌲",null,"🌲","🌲","🌲","🌲",null,"🚶",null,"⚔",},
+                                {null,null,"🌲","🌲","🌲","⚔",null,null,null,null,"🌲",null,null,"🌲","🌲","🌲","🌲","🌲",null,"🌲","🌲","🌲",null,"⚔","🌲",null,"🌲","🚶","🌲","🌲",null,"🌲",null,},
+                                {null,"🌲","🌲",null,null,"🌲",null,null,null,"🌲","🌲","🌲",null,"🌲","🌲","⚔","🌲","⚔","🌲",null,"🌲",null,null,"🌲",null,"🌲","🌲",null,null,"🌲",null,"⚔",null,},
+                                {null,"🏹","⚔","🌲",null,"🚶","🌲","🌲",null,"🚶","🌲","🌲","🌲","🌲","🌲",null,null,null,"🚶",null,"🚶","🌲","🌲","🏹","🌲","🚶","🌲","🌲",null,"🚶","🌲","🌲","🌲",},
+                                {"🌲",null,null,null,"🌲","🌲","🌲","🌲",null,"🌲",null,"🌲",null,"⚔",null,null,"🌲","🌲","🌲","🌲","🌲",null,"🌲","🌲","🌲",null,"🌲","🏹","🌲","🌲",null,null,"🏹",},
+                                {"🏹","🌲","🌲",null,"🌲","🏹",null,null,null,"🏹",null,"🏹","🌲","🌲",null,"🌲","🌲","🌲",null,"🌲","🌲",null,null,"⚔","🌲","🌲","🌲","🌲",null,"🏹",null,null,null,},
+                                {"🌲",null,"🏇","🌲","🌲",null,"🌲","🌲",null,"🌲","🌲",null,"🌲",null,"🌲","🏹","🌲","🏹",null,"🏇",null,null,"🌲","🌲",null,null,"⚔",null,null,null,null,"🌲",null,},
+                                {null,null,null,"🌲","🌲","🌲","🏇",null,"🌲","🌲","🌲",null,"🌲",null,null,null,null,"🌲",null,null,"🌲",null,null,null,null,"🌲",null,null,"🌲","🌲","🌲","🏹",null,},
+                                {"🌲","🌲","🌲","🌲",null,null,null,null,"🌲","🏹",null,"🌲","🏹",null,null,"🌲","🌲","🏹","🌲",null,"🌲","🌲","🌲","🌲","🌲","🌲",null,"🌲",null,"🏹",null,null,null,},
+                                {"🏇","🌲","🌲",null,"🌲","🌲",null,null,"🌲","🌲",null,"🏇","🌲",null,"🌲","🏹",null,"🌲",null,null,null,null,"🌲","🏇","🏹","🌲","🌲","🏇","🌲","🌲",null,"🌲",null,},
+                                {"🌲",null,null,null,"🌲","🏇",null,"🌲","💣","🏇",null,"🌲",null,"🌲",null,"🌲",null,"🏇","🌲","🌲",null,null,"🌲","🌲","🌲",null,"🌲","🌲","🌲","🏇","🌲",null,"🌲",},
+                                {"🌲","🌲","🌲",null,"🌲","🌲",null,"🌲",null,null,"🌲","🌲",null,"🌲","🌲","🏇","🌲",null,null,null,"🌲",null,"🌲","💣","🌲",null,null,"💣","🌲","🌲","🌲",null,"🏇",},
+                                {"🏇","💣","🌲","🌲",null,"💣",null,"🌲","🌲","🌲",null,"🏇","🌲","🌲",null,"🌲","🌲",null,null,null,"⛨",null,"🌲","🌲","🌲","🌲",null,"🌲",null,"🌲","🌲","🌲","🌲",},
+                                {"🌲","🌲",null,"🌲",null,"🌲","🌲",null,null,"⛨",null,"🌲","🌲",null,"🌲","🌲",null,null,null,"🌲",null,"🌲",null,"🌲",null,null,"🌲","🌲","🌲","⛨",null,"🌲",null,},
+                                {"💣",null,null,"🌲",null,null,"🌲",null,null,"🌲",null,"💣","🌲","🌲","💣",null,null,"🌲",null,"🌲",null,"🌲","🌲","🌲","🌲","🌲",null,"💣",null,"🌲","🌲",null,"🌲",},
+                                {"🌲",null,"🌲","🌲","🌲","🌲",null,"🌲",null,"⛨",null,"🌲",null,null,null,"🌲","🌲",null,"🌲","💣","🌲",null,"🌲","🌲","🌲","🌲","🌲","🌲","🌲","⛨",null,null,"💣",},
+                                {"⛨","🌲",null,null,null,"🌲","🌲","🌲",null,null,"🌲","⛨",null,null,"🌲","⛨","🌲",null,null,"🌲",null,null,null,"⛨",null,null,null,"🌲","🌲",null,"🌲",null,"🌲",},
+                                {null,null,null,null,null,"⛨","🌲","👑",null,null,null,null,null,null,null,"🌲","🌲",null,"🌲","🌲",null,null,"🌲","🌲","🌲",null,null,"🌲",null,null,"🌲",null,null,},
+                            }
+                        }
+                    },
+                    Answer = "FMWC UK",
+                    ExampleAnswer = "LANA BANANA",
+                    Minutes = 7f,
+                }
+            }
         };
     }
 }

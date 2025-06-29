@@ -93,7 +93,7 @@ namespace ExcelDynamicCase
 
             foreach (Match match in matches)
             {
-                string functionPart = match.Value.Replace("(", "").Trim();
+                string functionPart = match.Value.Replace("(", string.Empty).Replace("@", string.Empty).Trim();
 
                 if ((Storage.AllowedFunctions ?? new List<string>()).Contains(functionPart))
                 {
