@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -73,18 +75,22 @@ namespace Assets.Creator_Kit___RPG.Persistence
             SaveGame(saveData);
         }
 
-        public static void SaveUnlockedFunctions(string[] functions)
+        public static void SaveUnlockedFunctions(string[] functions, string[] functionsToKill = null)
         {
-            if (!functions.Any())
-            {
-                return;
-            }
-
             LoadGameData(out SaveData saveData);
 
             List<string> unlockedFunctions = saveData.UnlockedFunctions;
             unlockedFunctions.AddRange(functions);
-            unlockedFunctions = unlockedFunctions.Distinct().OrderBy(x => x).ToList();
+
+            if (functionsToKill is null)
+            {
+                unlockedFunctions = unlockedFunctions.Distinct().OrderBy(x => x).ToList();
+            }
+            else
+            {
+                unlockedFunctions = unlockedFunctions.Distinct().Where(x => !functionsToKill.Contains(x)).OrderBy(x => x).ToList();
+            }
+
             unlockedFunctions.Sort();
 
             saveData.UnlockedFunctions = unlockedFunctions;
@@ -121,6 +127,31 @@ namespace Assets.Creator_Kit___RPG.Persistence
             SaveUnlockedFunctions(winners);
 
             return winners;
+        }
+
+        public static string[] LockRandomFunctions()
+        {
+            LoadGameData(out SaveData saveData);
+
+            List<string> selectedFunctions = new();
+
+            string[] functionsInKillPool = saveData.UnlockedFunctions.Where(x => !x.Contains("RAND") && !x.Contains("BESSEL")).ToArray();
+
+            if (!functionsInKillPool.Any())
+            {
+                return selectedFunctions.ToArray();
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                selectedFunctions.Add(functionsInKillPool[UnityEngine.Random.Range((int)0, functionsInKillPool.Length)]);
+            }
+
+            selectedFunctions = selectedFunctions.Distinct().ToList();
+
+            SaveUnlockedFunctions(Array.Empty<string>(), selectedFunctions.ToArray());
+
+            return selectedFunctions.ToArray();
         }
 
         public static string[] GetFunctionsToUnlock(QuestionRewardClassification questionRewardClassification)
