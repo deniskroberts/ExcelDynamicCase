@@ -2406,6 +2406,18 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                     ExampleAnswer = "A:U1,B:U2,C:U3,D:U4,E:U5,F:U6,G:U7,H:U8,I:U9,J:U10",
                     Minutes = 15d,
                 }
+            },
+            {
+                CaseQuestionEnum.WikiJosephusProblem,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.WikiJosephusProblem,
+                    QuestionText = "Josephus, a man who valued his life highly, and his friends were about to be captured by a group of Roman soldiers.\r\n\r\nHis group was under strict instructions not to be captured alive, so instead decided to kill each other in a hard-to-predict order, and trust the last man to take his own life.\r\nJosephus, however, preferred being captured to killed and so is urgently trying to figure out the system before the Romans start arriving.\r\n\r\nThe system the group of friends are using is:\r\n1) the friends each get a unique number between 1 and n (n friends)\r\n2) 1 kills 2, 3 kills 4, 5 kills 6 etc etc.  Each remaining man kills the next highest man in the chain, mod(n), and the order goes round and round in a loop, until only 1 man is left alive.\r\n\r\nFor example, if there were 4 men in total, the man in position 1 would live.\r\nIf there were 7 then after the first loop, 7 would kill 1, then 3 would kill 5 and 7 would kill 3, such that the man in position 7 would live.\r\nIf there were 41 men in total, the man in position 19 would live.\r\n\r\nJosephus's group has 8000000000 people, which number should he try to be assigned in order to be the last man standing?",
+                    QuestionLink = "https://en.wikipedia.org/wiki/Josephus_problem",
+                    Answer = "7410065409",
+                    ExampleAnswer = 40000000d,
+                    Minutes = 11f,
+                }
             }
         };
     }

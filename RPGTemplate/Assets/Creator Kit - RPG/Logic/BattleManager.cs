@@ -58,7 +58,7 @@ namespace Assets.Creator_Kit___RPG.Logic
                 case QuestionRewardClassification.AdvancedText:
                 case QuestionRewardClassification.AdvancedManipulation:
                 case QuestionRewardClassification.AdvancedDates:
-                    return new int[] { 7, 10015, 40011, 8, 30369, 30380, 40016, 9, 40004, 40017, 12, 40005, 40014, 34, 40006, 40018, 36, 40010, 40019, 40026, 53168, 60001, 60007, 60009 };
+                    return new int[] { 7, 10015, 40011, 8, 30369, 30380, 40016, 9, 40004, 40017, 12, 40005, 40014, 34, 40006, 40018, 36, 40010, 40019, 40026, 53168, 60001, 60007, 60009, 70001 };
                 case QuestionRewardClassification.ExpertAggregates:
                 case QuestionRewardClassification.ExpertBases:
                 case QuestionRewardClassification.ExpertMaths:
@@ -157,6 +157,7 @@ namespace Assets.Creator_Kit___RPG.Logic
             60008 => 4f,
             60009 => 5f,
             70000 => 15f,
+            70001 => 11f,
             _ => throw new NotImplementedException(),
         };
     }

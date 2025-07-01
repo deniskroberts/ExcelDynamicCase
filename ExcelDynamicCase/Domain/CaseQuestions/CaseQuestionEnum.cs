@@ -85,5 +85,6 @@
         KodCodeMoveZeroes = 60008,
         KodCodeNonAdjacentSum = 60009,
         WikiGaleShapley = 70000,
+        WikiJosephusProblem = 70001,
     }
 }
