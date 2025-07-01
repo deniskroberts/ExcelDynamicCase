@@ -67,48 +67,50 @@ namespace Assets.Creator_Kit___RPG.Scripts.UI
                 $"Divine: {divineCount}/{divine.Length}, {pureCompletedQuestions.Where(x => divine.Contains(x)).Count()}/{divine.Length}",
             };
 
-            SetRank(basicCount, advancedCount, expertCount, divineCount);
-
+            SetRank(basicCount, advancedCount, expertCount, divineCount, basic.Length, advanced.Length, expert.Length, divine.Length);
 
             Fill(unlockedFunctions.content, savedUnlockedFunctions, 0, savedUnlockedFunctions.Count);
             Fill(lockedFunctions.content, savedLockedFunctions, 0, savedLockedFunctions.Length);
             Fill(completedLevels.content, completedLevelFill, 0, 4);
         }
 
-        void SetRank(int basicCount, int advancedCount, int expertCount, int divineCount)
+        void SetRank(int basicCount, int advancedCount, int expertCount, int divineCount, int basicFullCount, int advancedFullCount, int expertFullCount, int divineFullCount)
         {
             double points = basicCount * 10 + advancedCount * 30 + expertCount * 150 + divineCount * 500;
+            double totalPoints = basicFullCount * 10 + advancedFullCount * 30 + expertFullCount * 150 + divineFullCount * 500;
             string rank;
 
-            if (points < 20) { rank = "Sheets User :("; }
-            else if (points < 40) { rank = "Baby"; }
-            else if (points < 60) { rank = "Toddler"; }
-            else if (points < 80) { rank = "Child"; }
-            else if (points < 100) { rank = "Beginner"; }
-            else if (points < 120) { rank = "Average Joe"; }
-            else if (points < 160) { rank = "Basic"; }
-            else if (points < 240) { rank = "Probation"; }
-            else if (points < 320) { rank = "Novice"; }
-            else if (points < 400) { rank = "Unpaid Temp"; }
-            else if (points < 480) { rank = "Apprentice"; }
-            else if (points < 560) { rank = "Prodigy"; }
-            else if (points < 640) { rank = "Coffee Fetcher"; }
-            else if (points < 800) { rank = "Junior Analyst"; }
-            else if (points < 960) { rank = "Analyst"; }
-            else if (points < 1230) { rank = "Workhorse"; }
-            else if (points < 1460) { rank = "Snr. Analyst"; }
-            else if (points < 1740) { rank = "Team Lead"; }
-            else if (points < 1960) { rank = "Consultant"; }
-            else if (points < 1250) { rank = "Coffee Drinker"; }
-            else if (points < 2460) { rank = "Snr. Consultant"; }
-            else if (points < 2750) { rank = "I. Contributor"; }
-            else if (points < 2960) { rank = "Manager"; }
-            else if (points < 3250) { rank = "Expert"; }
-            else if (points < 3460) { rank = "Head of Dept."; }
-            else if (points < 4450) { rank = "Master"; }
-            else if (points < 5450) { rank = "Grand Master"; }
-            else if (points < 6440) { rank = "God"; }
-            else if (points < 7430) { rank = "ANgaiAllator"; }
+            double ratioOfEarnedPoints = points / totalPoints;
+
+            if (ratioOfEarnedPoints < 0.002692f) { rank = "Sheets User :("; }
+            else if (ratioOfEarnedPoints < 0.005384f) { rank = "Baby"; }
+            else if (ratioOfEarnedPoints < 0.008075f) { rank = "Toddler"; }
+            else if (ratioOfEarnedPoints < 0.010767f) { rank = "Child"; }
+            else if (ratioOfEarnedPoints < 0.013459f) { rank = "Beginner"; }
+            else if (ratioOfEarnedPoints < 0.016151f) { rank = "Average Joe"; }
+            else if (ratioOfEarnedPoints < 0.021534f) { rank = "Basic"; }
+            else if (ratioOfEarnedPoints < 0.032301f) { rank = "Probation"; }
+            else if (ratioOfEarnedPoints < 0.043069f) { rank = "Novice"; }
+            else if (ratioOfEarnedPoints < 0.053836f) { rank = "Unpaid Temp"; }
+            else if (ratioOfEarnedPoints < 0.064603f) { rank = "Apprentice"; }
+            else if (ratioOfEarnedPoints < 0.07537f) { rank = "Prodigy"; }
+            else if (ratioOfEarnedPoints < 0.086137f) { rank = "Coffee Fetcher"; }
+            else if (ratioOfEarnedPoints < 0.107672f) { rank = "Junior Analyst"; }
+            else if (ratioOfEarnedPoints < 0.129206f) { rank = "Analyst"; }
+            else if (ratioOfEarnedPoints < 0.165545f) { rank = "Workhorse"; }
+            else if (ratioOfEarnedPoints < 0.196501f) { rank = "Snr. Analyst"; }
+            else if (ratioOfEarnedPoints < 0.234186f) { rank = "Team Lead"; }
+            else if (ratioOfEarnedPoints < 0.263795f) { rank = "Consultant"; }
+            else if (ratioOfEarnedPoints < 0.168237f) { rank = "Coffee Drinker"; }
+            else if (ratioOfEarnedPoints < 0.33109f) { rank = "Snr. Consultant"; }
+            else if (ratioOfEarnedPoints < 0.370121f) { rank = "I. Contributor"; }
+            else if (ratioOfEarnedPoints < 0.398385f) { rank = "Manager"; }
+            else if (ratioOfEarnedPoints < 0.437416f) { rank = "Expert"; }
+            else if (ratioOfEarnedPoints < 0.46568f) { rank = "Head of Dept."; }
+            else if (ratioOfEarnedPoints < 0.598923f) { rank = "Master"; }
+            else if (ratioOfEarnedPoints < 0.733513f) { rank = "Grand Master"; }
+            else if (ratioOfEarnedPoints < 0.866756f) { rank = "God"; }
+            else if (ratioOfEarnedPoints < 1f) { rank = "ANgaiAllator"; }
             else { rank = "Completionist :)"; }
 
             rankTextMeshPro.text = $"{rank} ({points})";

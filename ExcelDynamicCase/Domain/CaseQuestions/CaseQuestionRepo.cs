@@ -2086,6 +2086,326 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                     ExampleAnswer = "LANA BANANA",
                     Minutes = 7f,
                 }
+            },
+            {
+                CaseQuestionEnum.KodCodeHowManyPrimes,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.KodCodeHowManyPrimes,
+                    QuestionText = "How many prime numbers are less than 1000?",
+                    QuestionLink = "https://github.com/KodCode-AI/kodcode",
+                    Answer = "168",
+                    ExampleAnswer = 100,
+                    Minutes = 5f,
+                }
+            },
+            {
+                CaseQuestionEnum.KodCodeSubtringsWithoutRepeats,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.KodCodeSubtringsWithoutRepeats,
+                    QuestionText = "In the following string of letters, how many substrings of length 5 with no repeated characters are there?\r\n\r\nSQPMQLARGZAJLBZIJZVUDSSVQPKLRDQMOYVCMJABLUUNLWSYONVDNLWGTSARSFSVSHFNVRGIGHXZRAODAJOPPYKJLKRQVWOLBMFBTQBEFXYEENLMVKDCYDGIIVNEMICKYCKPZOOJCCMFMNZSFGENJLXADPTYVQBESRRNINPCDLXRWUWFOMEANSJQGCKECSKFPFDOZREXDPRHFGZFPUW",
+                    QuestionLink = "https://github.com/KodCode-AI/kodcode",
+                    Answer = "129",
+                    ExampleAnswer = 100,
+                    Minutes = 4f,
+                }
+            },
+            {
+                CaseQuestionEnum.KodCodeTripletSum,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.KodCodeTripletSum,
+                    QuestionText = "How many distinct ways are there to make a sum of 60 from 3 different positive integers?",
+                    QuestionLink = "https://github.com/KodCode-AI/kodcode",
+                    Answer = "841",
+                    ExampleAnswer = 100,
+                    Minutes = 5f,
+                }
+            },
+            {
+                CaseQuestionEnum.KodCodeDrones,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.KodCodeDrones,
+                    QuestionText = "You have a squad of delivery drones, each of which can carry a maximum weight of 100.\r\n\r\nYou also have a set of packages, each of which has its own weight.\r\n\r\nEach drone can carry any number of packages, so long as they add up to at most the maximum weight.\r\n\r\nWhat is the minimum number of drones you would need to carry all the packages simultaneously?",
+                    QuestionLink = "https://github.com/KodCode-AI/kodcode",
+                    Data = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "Package Weights",
+                            new object[,]
+                            {
+                                {45d,9d,100d,100d,52d,},
+                                {51d,81d,38d,28d,77d,},
+                                {55d,24d,17d,90d,3d,},
+                                {49d,31d,80d,89d,75d,},
+                                {26d,77d,21d,37d,10d,},
+                                {22d,73d,56d,35d,52d,},
+                                {19d,22d,93d,71d,4d,},
+                                {41d,56d,3d,48d,43d,},
+                                {100d,56d,74d,100d,94d,},
+                                {48d,90d,10d,57d,22d,},
+                                {25d,50d,78d,87d,61d,},
+                                {76d,1d,43d,10d,46d,},
+                                {61d,45d,23d,38d,26d,},
+                                {37d,24d,52d,80d,15d,},
+                                {39d,92d,65d,70d,99d,},
+                            }
+                        }
+                    },
+                    Answer = "39",
+                    ExampleAnswer = 30d,
+                    Minutes = 15f,
+                }
+            },
+            {
+                CaseQuestionEnum.KodCodeExcludeItemFromProduct,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.KodCodeExcludeItemFromProduct,
+                    QuestionText = "For each of the integers 1 to 10, calculate the product of all other integers in the range 1-10, and then add them together.",
+                    QuestionLink = "https://github.com/KodCode-AI/kodcode",
+                    Answer = "10628640",
+                    ExampleAnswer = 23134718d,
+                    Minutes = 3f,
+                }
+            },
+            {
+                CaseQuestionEnum.KodCodeSortNumbers,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.KodCodeSortNumbers,
+                    QuestionText = "Sort these numbers small to large, answer with the concatenation of the sorted list.",
+                    QuestionLink = "https://github.com/KodCode-AI/kodcode",
+                    Data = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "Numbers",
+                            new object[,]
+                            {
+                                {3d,6d,5d,17d,16d,15d,},
+                                {8d,8d,14d,6d,19d,13d,},
+                                {2d,11d,13d,11d,5d,8d,},
+                                {18d,1d,18d,16d,10d,10d,},
+                                {20d,19d,1d,14d,20d,3d,},
+                                {13d,1d,16d,3d,4d,14d,},
+                                {14d,11d,8d,17d,14d,10d,},
+                                {2d,14d,12d,14d,7d,10d,},
+                                {3d,11d,17d,4d,19d,1d,},
+                                {11d,11d,8d,7d,7d,18d,},
+                                {9d,5d,7d,11d,13d,7d,},
+                                {15d,7d,1d,10d,14d,13d,},
+                                {1d,13d,3d,15d,19d,16d,},
+                                {7d,13d,1d,12d,14d,9d,},
+                                {8d,7d,6d,5d,17d,15d,},
+                                {15d,6d,20d,1d,15d,13d,},
+                                {18d,10d,20d,7d,8d,13d,},
+                                {11d,11d,5d,3d,12d,16d,},
+                            }
+                        }
+                    },
+                    Answer = "111111112233333344555556666777777777888888899101010101010111111111111111111121212131313131313131313141414141414141414151515151515161616161617171717181818181919191920202020",
+                    ExampleAnswer = "231790317289347189312793417283919381",
+                    Minutes = 3f,
+                }
+            },
+            {
+                CaseQuestionEnum.KodCodeLakePerimeter,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.KodCodeLakePerimeter,
+                    QuestionText = "Here is the centre of a lake (marked with W for water) with some islands in it (marked as L for land).\r\n\r\nCalculate the total perimeter of the islands.",
+                    QuestionLink = "https://github.com/KodCode-AI/kodcode",
+                    Data = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "Lake",
+                            new object[,]
+                            {
+                                {"W","W","W","W","W","W","W","W",},
+                                {"W","W","W","W","W","W","W","W",},
+                                {"W","L","W","W","L","L","W","W",},
+                                {"W","L","L","W","L","W","W","W",},
+                                {"W","L","L","W","L","W","L","W",},
+                                {"W","L","L","W","L","W","W","W",},
+                                {"W","L","L","L","L","L","W","W",},
+                                {"W","L","L","L","L","L","W","W",},
+                                {"W","L","L","L","L","L","W","W",},
+                                {"W","W","W","W","W","W","W","W",},
+                                {"W","W","W","W","W","W","W","W",},
+                                {"W","W","W","W","W","W","W","W",},
+                                {"W","L","W","W","W","W","W","W",},
+                                {"W","L","W","W","W","W","W","W",},
+                                {"W","L","W","W","L","W","W","W",},
+                                {"W","L","L","L","L","L","L","W",},
+                                {"W","L","L","L","L","W","L","W",},
+                                {"W","W","W","L","W","W","L","W",},
+                                {"W","W","W","L","W","W","L","W",},
+                                {"W","W","W","W","W","W","L","W",},
+                                {"W","W","W","W","W","W","L","W",},
+                                {"W","W","W","W","W","W","W","W",},
+                            }
+                        }
+                    },
+                    Answer = "76",
+                    ExampleAnswer = 50d,
+                    Minutes = 3f,
+                }
+            },
+            {
+                CaseQuestionEnum.KodCodeMaxRectangle,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.KodCodeMaxRectangle,
+                    QuestionText = "In this grid of numbers, find the rectangle subset with the largest sum.  What is that sum?",
+                    QuestionLink = "https://github.com/KodCode-AI/kodcode",
+                    Data = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "Grid of Numbers",
+                            new object[,]
+                            {
+                                {18d,-16d,-20d,-19d,-15d,-8d,},
+                                {4d,-18d,-10d,2d,-7d,-3d,},
+                                {9d,13d,4d,-5d,-16d,-8d,},
+                                {-12d,2d,7d,0d,3d,1d,},
+                                {2d,8d,13d,17d,9d,4d,},
+                                {16d,6d,-10d,13d,-12d,6d,},
+                                {-5d,-8d,8d,2d,-7d,3d,},
+                                {2d,2d,-14d,5d,3d,-4d,},
+                                {-8d,-20d,-16d,-5d,11d,-17d,},
+                            }
+                        }
+                    },
+                    Answer = "83",
+                    ExampleAnswer = 50d,
+                    Minutes = 8f,
+                }
+            },
+            {
+                CaseQuestionEnum.KodCodeMoveZeroes,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.KodCodeMoveZeroes,
+                    QuestionText = "Return what the following string would be if all of the 'Z's were moved to the end of the string, with everything else remaining in place:\r\n\r\nIMZYLZAZJVVLCIVZMZQRHZBDIPXVVZTBYXMSDPNYNIEWLAYQGDCTMARNHEQEDFKBZQ\r\n",
+                    QuestionLink = "https://github.com/KodCode-AI/kodcode",
+                    Answer = "IMYLAJVVLCIVMQRHBDIPXVVTBYXMSDPNYNIEWLAYQGDCTMARNHEQEDFKBQZZZZZZZZ",
+                    ExampleAnswer = "DUIJHSHDHSDJKZZZZZ",
+                    Minutes = 4f,
+                }
+            },
+            {
+                CaseQuestionEnum.KodCodeNonAdjacentSum,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.KodCodeNonAdjacentSum,
+                    QuestionText = "Below is a column of numbers.  Return the maximum sum you can obtain by using a set of non-consecutive numbers in the column (i.e. without any 2 being directly above or below another).",
+                    QuestionLink = "https://github.com/KodCode-AI/kodcode",
+                    Data = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "Numbers",
+                            new object[,]
+                            {
+                                {8d,},
+                                {5d,},
+                                {5d,},
+                                {6d,},
+                                {8d,},
+                                {5d,},
+                                {5d,},
+                                {8d,},
+                                {2d,},
+                                {1d,},
+                                {1d,},
+                                {7d,},
+                                {3d,},
+                                {5d,},
+                                {1d,},
+                                {4d,},
+                                {6d,},
+                                {6d,},
+                                {8d,},
+                                {1d,},
+                                {10d,},
+                                {8d,},
+                                {7d,},
+                                {4d,},
+                                {4d,},
+                                {5d,},
+                                {9d,},
+                                {4d,},
+                                {7d,},
+                                {3d,},
+                            }
+                        }
+                    },
+                    Answer = "103",
+                    ExampleAnswer = 70d,
+                    Minutes = 5f,
+                }
+            },
+            {
+                CaseQuestionEnum.DPMMSNumbersSetsDonCalls,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.DPMMSNumbersSetsDonCalls,
+                    QuestionText = "Each of 32 Excel ESports players has a unique piece of Excel ESports gossip.  They decide to share all 32 pieces of information with each other.\r\n\r\nWhen a player calls another player, all unique pieces of information they currently have are shared between them.\r\n\r\nWhat is the minimum number of calls required for all information to be shared?",
+                    QuestionLink = "https://www.math.uni-bielefeld.de/~sillke/PUZZLES/gossips.pdf",
+                    Answer = "60",
+                    ExampleAnswer = 100d,
+                    Minutes = 15d,
+                }
+            },
+            {
+                CaseQuestionEnum.WikiGaleShapley,
+                new CaseQuestion()
+                {
+                    Id = CaseQuestionEnum.WikiGaleShapley,
+                    QuestionText = "Pair up the 10 applicants with the assigned universities such that each applicant is matched to exactly one university and no blocking pair exists - i.e. there is no pair of one applicant and one university who are not matched to each other, who would both prefer to be matched to easy other.\r\n\r\nAnswer with the list of pairs.",
+                    QuestionLink = "https://en.wikipedia.org/wiki/Gale%E2%80%93Shapley_algorithm",
+                    Data = new Dictionary<string, object[,]>()
+                    {
+                        {
+                            "Applicant Preferences",
+                            new object[,]
+                            {
+                                {"Applicant","Preference 1","Preference 2","Preference 3","Preference 4","Preference 5","Preference 6","Preference 7","Preference 8","Preference 9","Preference 10",},
+                                {"A","U8","U4","U3","U9","U6","U7","U10","U5","U1","U2",},
+                                {"B","U4","U6","U3","U5","U2","U9","U8","U1","U7","U10",},
+                                {"C","U8","U6","U1","U3","U5","U10","U2","U7","U4","U9",},
+                                {"D","U8","U9","U4","U1","U3","U10","U2","U5","U6","U7",},
+                                {"E","U10","U7","U8","U4","U1","U3","U5","U9","U6","U2",},
+                                {"F","U9","U1","U4","U3","U8","U6","U10","U5","U2","U7",},
+                                {"G","U6","U8","U5","U10","U9","U3","U7","U4","U1","U2",},
+                                {"H","U1","U4","U10","U7","U9","U3","U2","U6","U8","U5",},
+                                {"I","U7","U1","U5","U9","U6","U8","U10","U4","U3","U2",},
+                                {"J","U5","U10","U2","U8","U3","U9","U7","U4","U1","U6",},
+                            }
+                        },
+                        {
+                            "University Preferences",
+                            new object[,]
+                            {
+                                {"University","Preference 1","Preference 2","Preference 3","Preference 4","Preference 5","Preference 6","Preference 7","Preference 8","Preference 9","Preference 10",},
+                                {"U1","C","B","A","E","G","H","I","J","F","D",},
+                                {"U2","J","A","B","G","I","H","F","E","D","C",},
+                                {"U3","D","E","J","B","F","G","A","H","I","C",},
+                                {"U4","I","A","F","C","H","E","D","J","B","G",},
+                                {"U5","D","H","J","A","C","F","G","E","I","B",},
+                                {"U6","D","I","E","B","J","G","F","A","H","C",},
+                                {"U7","H","J","F","A","G","C","B","D","I","E",},
+                                {"U8","E","F","D","I","J","G","C","B","A","H",},
+                                {"U9","A","D","C","F","I","E","G","J","H","B",},
+                                {"U10","F","A","J","B","D","G","H","E","C","I",},
+                            }
+                        }
+                    },
+                    Answer = "A:U4,B:U3,C:U1,D:U9,E:U8,F:U10,G:U2,H:U7,I:U6,J:U5",
+                    ExampleAnswer = "A:U1,B:U2,C:U3,D:U4,E:U5,F:U6,G:U7,H:U8,I:U9,J:U10",
+                    Minutes = 15d,
+                }
             }
         };
     }
