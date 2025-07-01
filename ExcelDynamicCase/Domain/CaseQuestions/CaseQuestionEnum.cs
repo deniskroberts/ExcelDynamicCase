@@ -28,7 +28,7 @@
         EulerCountingSummations = 76,
         DPMMSNumbersSetsEx1Q15 = 10015,
         DPMMSNumbersSetsDonCalls = 10016,
-        CodeGolf9x9Queens = 20000,
+        CodeGolf9x9Rooks = 20000,
         CodeGolfReverseNATOPhoneticSpelling = 20001,
         CodeGolfAlbuquerque = 20002,
         DailyProgrammerIntegerComplexity = 30354,
