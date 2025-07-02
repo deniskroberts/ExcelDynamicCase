@@ -1763,7 +1763,7 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                 new CaseQuestion()
                 {
                     Id = CaseQuestionEnum.LaytonASweetTreat,
-                    QuestionText = "You go to the shop to buy some almond chocolate to share with your friends. However, upon unwrapping the chocolate, you find that only not all of the chocolate squares actually have an almond in them.\r\n\r\nThe letter C represents a non-almond chocolate square and A represents an almond chocolate square.\r\n\r\nCut up the chocolate along the cell borders in such a way that each resulting block is the exact same exact shape (in terms of cells) up to rotation, and each contains 1 almond.\r\n\r\nThe position of an almond within the shape should be evenly divided between each of the squares in that shape - i.e. if your blocks have n squares, 1/n of them should have the almond in position A, 1/n in position B etc.\r\n\r\nAnswer with the total number of cell borders that you would have to cut in total to divide the chocolate.",
+                    QuestionText = "You go to the shop to buy some almond chocolate to share with your friends. However, upon unwrapping the chocolate, you find that only not all of the chocolate squares actually have an almond in them.\r\n\r\nThe letter C represents a non-almond chocolate square and A represents an almond chocolate square.\r\n\r\nCut up the chocolate along the cell borders in such a way that each resulting block is the exact same exact shape (in terms of cells) up to rotation (reflection is not allowed), and each contains 1 almond.\r\n\r\nThe position of an almond within the shape should be evenly divided between each of the squares in that shape - i.e. if your blocks have n squares, 1/n of them should have the almond in position A, 1/n in position B etc on your shape.\r\n\r\nAnswer with the total number of cell borders that you would have to cut in total to divide the chocolate.",
                     QuestionLink = "https://layton.fandom.com/wiki/Puzzle:A_Sweet_Treat",
                     Data = new Dictionary<string, object[,]>()
                     {
@@ -1801,11 +1801,11 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                 new CaseQuestion()
                 {
                     Id = CaseQuestionEnum.Layton500Pearls,
-                    QuestionText = "A wizard sets a traveller a strange task.\r\n\r\n\"There are 500 pearls in that cave. I want you to go and bring a certain number of pearls to me. This number allows you to divide the pearls into groups of 2, 3, 4, 5, 6 or 7 and always have one pearl left over. Bring me this number of pearls and you can keep them all for yourself!\"\r\n\r\nThe traveller tries his best, but the number of pearls he bring back doesn't leave one pearl over when divided into groups of 4. How many pearls did he bring to the wizard?",
+                    QuestionText = "A wizard sets a traveller a strange task.\r\n\r\n\"There are 500 pearls in that cave. I want you to go and bring a certain number of pearls to me. This number allows you to divide the pearls into groups of 2, 3, 4, 5, 6 or 7 and always have 1 pearl left over. Bring me this number of pearls and you can keep them all for yourself!\"\r\n\r\nThe traveller tries his best, but the number of pearls he bring back doesn't leave 1 pearl over when divided into groups of 4. How many pearls did he bring to the wizard?",
                     QuestionLink = "https://layton.fandom.com/wiki/Puzzle:500_Pearls",
                     Answer = "211",
                     ExampleAnswer = 200,
-                    Minutes = 3f,
+                    Minutes = 5f,
                 }
             },
             {
@@ -1813,11 +1813,11 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                 new CaseQuestion()
                 {
                     Id = CaseQuestionEnum.LaytonTheCardTournament,
-                    QuestionText = "Some people meet for a round-robin card tournament, where every player plays one hand against every other player. Monty has to leave after only a few hands, missing the remainder of the tournament. A total of 59 hands are played at the tournament. How many hands did Monty play before leaving?\r\n\r\nThe card game in question is a two-player game, and no person played with the same opponent more than once. No one missed any hands besides Monty.",
+                    QuestionText = "Some people meet for a round-robin card tournament, where every player plays one game against every other player. Monty has to leave after only a few hands, missing the remainder of the tournament. A total of 59 hands are played at the tournament. How many hands did Monty play before leaving?\r\n\r\nThe card game in question is a two-player game, and no person played with the same opponent more than once. No one missed any hands besides Monty.",
                     QuestionLink = "https://layton.fandom.com/wiki/Puzzle:The_Card_Tournament",
                     Answer = "4",
                     ExampleAnswer = 7,
-                    Minutes = 4f,
+                    Minutes = 6f,
                 }
             },
             {
@@ -1825,11 +1825,11 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                 new CaseQuestion()
                 {
                     Id = CaseQuestionEnum.LaytonTheScholarsLife,
-                    QuestionText = "The following words are written on a famous mathematician's grave.\r\n\r\n\"Following the 1/6th of my life I spent as a child, I spent 1/12th of my life as a young man. Then, 1/7th of my life later, I got married. Five years after I wed, I was blessed with a child, but sadly, he only lived half the time I was alive before passing away. Today, four years after his death, I too will depart from this world.\"\r\n\r\nCan you work out how many years the mathematician lived",
+                    QuestionText = "The following words are written on a famous mathematician's grave.\r\n\r\n\"Following the 1/6th of my life I spent as a child, I spent 1/12th of my life as a young man. Then, 1/7th of my life later, I got married. Five years after I wed, I was blessed with a child, but sadly, he only lived half the time I was alive before passing away. Today, four years after his death, I too will depart from this world.\"\r\n\r\nCan you work out how many years the mathematician lived?",
                     QuestionLink = "https://layton.fandom.com/wiki/Puzzle:The_Scholar%27s_Life",
                     Answer = "84",
                     ExampleAnswer = 43,
-                    Minutes = 3f,
+                    Minutes = 6f,
                 }
             },
             {
@@ -1837,7 +1837,7 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                 new CaseQuestion()
                 {
                     Id = CaseQuestionEnum.LaytonTheFrogsPath,
-                    QuestionText = "A frog sits perched on the space labeled S in the grid below. This little guy has an unusual jump. His first jump travels one space, his second jump travels two spaces, and his third jump travels three spaces. After his third jump he repeats this pattern. The frog can't change his direction midjump, but he can turn around between jumps.\r\n\r\nThe frog's goal is to move through the path below and land exactly on the space marked G. What is the fewest number of jumps he needs to make to do this?\r\n\r\nThe frog can only jump on valid items on the path marked with some letter.\r\nNote that in some situations the frog might become stuck and unable to move.",
+                    QuestionText = "A frog sits perched on the space labeled S in the grid below.\r\n\r\nThis little guy has an unusual jump. His first jump travels one space, his second jump travels two spaces, and his third jump travels three spaces. After his third jump he repeats this pattern, going back to 1 space jumps.\r\n\r\nThe frog can't change his direction midjump, but he can turn around between jumps.\r\n\r\nThe frog's goal is to move through the path below and land exactly on the space marked G. What is the fewest number of jumps he needs to make to do this?\r\n\r\nThe frog can only jump on valid items on the path marked with some letter.\r\nNote that in some situations the frog might become stuck and unable to move.",
                     QuestionLink = "https://layton.fandom.com/wiki/Puzzle:The_Frog%27s_Path",
                     Data = new Dictionary<string, object[,]>()
                     {
@@ -1912,7 +1912,7 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                 new CaseQuestion()
                 {
                     Id = CaseQuestionEnum.LaytonFollowTheCode,
-                    QuestionText = "This note contains instructions for disarming the traps in the room that trigger if you don't follow the movement path!\r\n\r\n\"In the top corner, you can disarm the traps.  Trace a path from the centre square, going horizontally or vertically from square to square in the order 1, 2, 3, 1, 2, 3, 1,... until you reach the correct button. You cannot pass through the same square twice.\"\r\n\r\nAnswer with the number of squares walked on, including the starting centre cell and the ending top left cell.",
+                    QuestionText = "This note contains instructions for disarming the traps in the room that trigger if you don't follow the movement path!\r\n\r\n\"In the top-left corner, you can disarm the traps.  Trace a path from the centre square, going horizontally or vertically from square to square in the order 1, 2, 3, 1, 2, 3, 1,... until you reach the correct button in the top-left. You cannot pass through the same square twice.\"\r\n\r\nAnswer with the number of squares walked on, including the starting centre cell and the ending top-left cell.",
                     QuestionLink = "https://layton.fandom.com/wiki/Puzzle:Follow_the_Code",
                     Data = new Dictionary<string, object[,]>()
                     {
@@ -1940,7 +1940,7 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                 new CaseQuestion()
                 {
                     Id = CaseQuestionEnum.LaytonButtonToButton,
-                    QuestionText = "In order to open the lock you have to press all the buttons on the keypad in an order dictated by the symbols on the buttons, finishing with the star button in the centre of the lock. (N-E-W-S = North-East-South-West)\r\n\r\nWhich button is first in the sequence that opens the lock?\r\n\r\nAnswer in Excel grid notation if the lockpad was in A1:E5.",
+                    QuestionText = "In order to open the lock you have to press all the buttons on the keypad in an order dictated by the symbols on the buttons, finishing with the star button in the centre of the lock. (N-E-W-S = North-East-South-West)/\r\n\r\nFor example, if you start by clicking the top left 3E button, the next button you would press would be the 2W button that is 3 right of it, then you would press the 4S button 2 left of '2W' and so on.\r\n\r\bThe goal is to the find the starting button where all other buttons are pressed in the sequence, and the last pressed button is the Star.\r\n\r\nWhich button is first in the sequence that opens the lock?\r\n\r\nAnswer in Excel grid notation if the lockpad was in A1:E5.",
                     QuestionLink = "https://layton.fandom.com/wiki/Puzzle:Button_to_Button",
                     Data = new Dictionary<string, object[,]>()
                     {
@@ -1950,7 +1950,7 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                             {
                                 {"3E","4S","2W","2W","2S",},
                                 {"3E","3E","3S","2W","2S",},
-                                {"1E","1S","Start","3W","2W",},
+                                {"1E","1S","Star","3W","2W",},
                                 {"2N","1W","3N","1N","2W",},
                                 {"4E","1W","1E","1E","4N",},
                             }
@@ -2118,9 +2118,9 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                     Id = CaseQuestionEnum.KodCodeTripletSum,
                     QuestionText = "How many distinct ways are there to make a sum of 60 from 3 different positive integers?",
                     QuestionLink = "https://github.com/KodCode-AI/kodcode",
-                    Answer = "841",
+                    Answer = "271",
                     ExampleAnswer = 100,
-                    Minutes = 5f,
+                    Minutes = 8f,
                 }
             },
             {
@@ -2164,7 +2164,7 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                 new CaseQuestion()
                 {
                     Id = CaseQuestionEnum.KodCodeExcludeItemFromProduct,
-                    QuestionText = "For each of the integers 1 to 10, calculate the product of all other integers in the range 1-10, and then add them together.",
+                    QuestionText = "For each of the integers 1 to 10, calculate the product of all other integers in the range 1-10, and then add those 10 products together.",
                     QuestionLink = "https://github.com/KodCode-AI/kodcode",
                     Answer = "10628640",
                     ExampleAnswer = 23134718d,
@@ -2206,7 +2206,7 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                         }
                     },
                     Answer = "111111112233333344555556666777777777888888899101010101010111111111111111111121212131313131313131313141414141414141414151515151515161616161617171717181818181919191920202020",
-                    ExampleAnswer = "231790317289347189312793417283919381",
+                    ExampleAnswer = "'231790317289347189312793417283919381",
                     Minutes = 3f,
                 }
             },
@@ -2300,7 +2300,7 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                 new CaseQuestion()
                 {
                     Id = CaseQuestionEnum.KodCodeNonAdjacentSum,
-                    QuestionText = "Below is a column of numbers.  Return the maximum sum you can obtain by using a set of non-consecutive numbers in the column (i.e. without any 2 being directly above or below another).",
+                    QuestionText = "Below is a column of numbers.  Return the maximum sum you can obtain by using a set of non-consecutive numbers in the column (i.e. without any 2 being directly above or below another).\r\n\r\nFor example, if you use the 8 at the top you cannot use the 5 below it in your set.\r\nIf you use the second item in the column, the 5, you cannot use the 8 above it or the 5 below it.",
                     QuestionLink = "https://github.com/KodCode-AI/kodcode",
                     Data = new Dictionary<string, object[,]>()
                     {
@@ -2343,7 +2343,7 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                     },
                     Answer = "103",
                     ExampleAnswer = 70d,
-                    Minutes = 5f,
+                    Minutes = 10f,
                 }
             },
             {
@@ -2355,7 +2355,7 @@ namespace ExcelDynamicCase.Domain.CaseQuestions
                     QuestionLink = "https://www.math.uni-bielefeld.de/~sillke/PUZZLES/gossips.pdf",
                     Answer = "60",
                     ExampleAnswer = 100d,
-                    Minutes = 15d,
+                    Minutes = 22d,
                 }
             },
             {

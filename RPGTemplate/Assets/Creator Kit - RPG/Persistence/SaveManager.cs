@@ -142,7 +142,7 @@ namespace Assets.Creator_Kit___RPG.Persistence
                 return selectedFunctions.ToArray();
             }
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 1; i++)
             {
                 selectedFunctions.Add(functionsInKillPool[UnityEngine.Random.Range((int)0, functionsInKillPool.Length)]);
             }
