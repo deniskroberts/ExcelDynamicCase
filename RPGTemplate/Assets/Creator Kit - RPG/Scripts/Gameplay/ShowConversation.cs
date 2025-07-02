@@ -60,7 +60,7 @@ namespace RPGM.Events
                 GameObject gameObject = GameObject.Find("PipeBootstrap");
                 GameObject musicGameObject = GameObject.Find("Controllers");
                 MusicController musicController = musicGameObject.GetComponent<MusicController>();
-                musicController.CrossFadeIntoBattle(npc.name == "MichaelJarman");
+                musicController.CrossFadeIntoBattle(npc.audioClip);
 
                 PipeBootstrap pipeBootstrap = gameObject.GetComponent<PipeBootstrap>();
 

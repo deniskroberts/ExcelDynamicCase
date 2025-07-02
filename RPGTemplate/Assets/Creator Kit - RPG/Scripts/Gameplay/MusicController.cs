@@ -28,9 +28,9 @@ namespace RPGM.Gameplay
             audioSourceB.Stop();
         }
 
-        public void CrossFadeIntoBattle(bool isChampion)
+        public void CrossFadeIntoBattle(AudioClip audioClip)
         {
-            CrossFade(isChampion ? championAudio : battleAudio);
+            CrossFade(audioClip ?? battleAudio);
         }
 
         public void CrossFadeOutOfBattle()

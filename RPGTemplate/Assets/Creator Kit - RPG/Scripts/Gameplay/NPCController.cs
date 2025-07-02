@@ -13,6 +13,7 @@ namespace RPGM.Gameplay
         public ConversationScript[] conversations;
         public int conversationNumber = 0;
         public QuestionRewardClassification rewardClassification;
+        public AudioClip audioClip;
 
         Quest activeQuest = null;
         
