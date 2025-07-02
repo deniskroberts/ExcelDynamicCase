@@ -1,4 +1,0 @@
-*.resource filter=lfs diff=lfs merge=lfs -text
-ExcelDynamicCase/overworld/Excelopolis_Data/sharedassets0.resource filter=lfs diff=lfs merge=lfs -text
-ExcelDynamicCase/ExcelDynamicCase/publish/overworld/Excelopolis_Data/sharedassets0.resource filter=lfs diff=lfs merge=lfs -text
-**/sharedassets0.resource filter=lfs diff=lfs merge=lfs -text
