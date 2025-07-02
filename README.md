@@ -14,10 +14,13 @@ If you just want to run the pre-built version of this tool without building the 
 5. File > Options > Trust Centre > Trust Centre Settings > Trusted Locations
 6. Add the 'publish' subfolder (ExcelDynamicCase/publish) to your trusted locations
 7. Close all your Excel instances
-8. Go to the publish subfolder and open the xlsx
-9. Click 'Install'
-10. Enjoy!
-11. (Optionally when you are done, you can remove the installation from 'add or remove programs > ExcelDynamicCase' remove
+8. Go to the publish subfolder
+9. Right click on ExcelDynamicCase.vsto -> properties -> unblock (if available)
+10. Right click on ExcelDynamicCase.xlsx -> properties -> unblock (if available)
+11. Open the xlsx
+12. Click 'Install'
+13. Enjoy!
+14. (Optionally when you are done, you can remove the installation from 'add or remove programs > ExcelDynamicCase' remove
 
 ## 🔧⚙ Troubleshoot Installation
 
