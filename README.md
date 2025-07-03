@@ -28,7 +28,7 @@ If you just want to run the pre-built version of this tool without building the 
 2. 'This document contains custom code that cannot be loaded because the location is not in your trusted locations list.' - If you did add it to your trusted locations, this may be because it is a cloud folder (see step 3).
 3. 'This document might not function as expected because the following control is missing.' - Close Excel instances, run 'setup.exe' in the publish folder and reopen the xlsx. 
 
-## ⟳ Starting A New Save
+## ⟳ Starting A New Game/Save File 
 
 Navigate to '%AppData%/LocalLow/HarryGross' in File Explorer and delete the 'Excelopolis' folder.  You may need to enable 'Hidden items' in File Explorer to find the AppData folder, but it should be a subfolder of your user folder.
 
