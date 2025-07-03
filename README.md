@@ -1,10 +1,11 @@
 # Excel Dynamic Case
 
-This is a C# .NET Framework VSTO Excel Workbook and joint Unity project that is a basic demo for an Excel battle case with an overworld that you can navigate in, and where you can unlock the use of new functions as you go.
+This is a C# .NET Framework VSTO Excel Workbook and joint Unity project for Windows.
+It is a basic demo for an Excel battle case with an overworld that you can navigate in, and where you can unlock the use of new functions as you go.
 
 ## 🚀 Quick Start (Run the App)
 
-If you just want to run the pre-built version of this tool without building the solution yourself:
+If you want to run the pre-built version of this tool without building the solution yourself (i.e. just play the game without editing it):
 
 0. If you have installed a previous version of the project, go to 'Add or remove programs > ExcelDynamicCase' and uninstall it.  (This will not remove any save data.)
 1. **Download the repository (Code > Download ZIP).
