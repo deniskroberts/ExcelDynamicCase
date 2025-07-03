@@ -6,7 +6,7 @@ This is a C# .NET Framework VSTO Excel Workbook and joint Unity project that is 
 
 If you just want to run the pre-built version of this tool without building the solution yourself:
 
-0. If you have installed a previous version of the project, go to 'Add or remove programs > ExcelDynamicCase' and uninstall it.
+0. If you have installed a previous version of the project, go to 'Add or remove programs > ExcelDynamicCase' and uninstall it.  (This will not remove any save data.)
 1. **Download the repository (Code > Download ZIP).
 2. Right click on the downloaded zip file, select 'Properties' and then select 'Unblock'
 3. Unzip the zip file to a folder (to a non-cloud location, cloud locations like places automatically backup up to onedrive will not work)
@@ -27,6 +27,10 @@ If you just want to run the pre-built version of this tool without building the 
 1. 'Deployment and application do not have matching security zones.' - This occurs if the zip was not unblocked correctly in step 2.  If you fix this and it still fails, restarting and/or extracting to an already Trusted location has been known to work although I'm not sure why.
 2. 'This document contains custom code that cannot be loaded because the location is not in your trusted locations list.' - If you did add it to your trusted locations, this may be because it is a cloud folder (see step 3).
 3. 'This document might not function as expected because the following control is missing.' - Close Excel instances, run 'setup.exe' in the publish folder and reopen the xlsx. 
+
+## ⟳ Starting A New Save
+
+Navigate to '%AppData%/LocalLow/HarryGross' in File Explorer and delete the 'Excelopolis' folder.  You may need to enable 'Hidden items' in File Explorer to find the AppData folder, but it should be a subfolder of your user folder.
 
 ## 🛠️ Developer Setup (Build from Source)
 
