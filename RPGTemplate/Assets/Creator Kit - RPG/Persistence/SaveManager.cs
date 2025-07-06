@@ -135,7 +135,7 @@ namespace Assets.Creator_Kit___RPG.Persistence
 
             List<string> selectedFunctions = new();
 
-            string[] functionsInKillPool = saveData.UnlockedFunctions.Where(x => !x.Contains("RAND") && !x.Contains("BESSEL")).ToArray();
+            string[] functionsInKillPool = saveData.UnlockedFunctions.Where(x => !x.Contains("RAND") && !x.Contains("BESSEL") && x != "VLOOKUP" && x != "INDEX" && x != "XLOOKUP").ToArray();
 
             if (!functionsInKillPool.Any())
             {
